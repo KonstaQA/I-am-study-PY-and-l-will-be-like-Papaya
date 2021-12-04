@@ -10,7 +10,7 @@ class Main(Frame):
     def startUI(self):
         btn = Button(root, text="Камень", font=("Times New Roman", 15),
                      command=lambda x=1: self.btn_click(x))
-        btn2 = Button(root, text="Ножницы", font=("Times New Roman", 15),
+        btn2 = Button(root, text="Ножницы",ont=("Times New Roman", 15),
                       command=lambda x=2: self.btn_click(x))
         btn3 = Button(root, text="Бумага", font=("Times New Roman", 15),
                       command=lambda x=3: self.btn_click(x))
