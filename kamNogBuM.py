@@ -8,11 +8,11 @@ class Main(Frame):
         self.startUI()
 
     def startUI(self):
-        btn = Button(root, text="Камень", font=("Times New Roman", 15),
+        btn = Button(root, text="Камінь", font=("Times New Roman", 15),
                      command=lambda x=1: self.btn_click(x))
-        btn2 = Button(root, text="Ножницы", font=("Times New Roman", 15),
+        btn2 = Button(root, text="Ножиці", font=("Times New Roman", 15),
                       command=lambda x=2: self.btn_click(x))
-        btn3 = Button(root, text="Бумага", font=("Times New Roman", 15),
+        btn3 = Button(root, text="Бамага", font=("Times New Roman", 15),
                       command=lambda x=3: self.btn_click(x))
 
         btn.place(x=10, y=100, width=120, height=50)
@@ -35,15 +35,15 @@ class Main(Frame):
 
         if choise == comp_choise:
             self.drow += 1
-            self.lbl.configure(text="Ничья")
+            self.lbl.configure(text="Нічія")
         elif choise == 1 and comp_choise == 2 \
                 or choise == 2 and comp_choise == 3 \
                 or choise == 3 and comp_choise == 1:
             self.win += 1
-            self.lbl.configure(text="Победа")
+            self.lbl.configure(text="Перемога")
         else:
             self.lose += 1
-            self.lbl.configure(text="Проигрыш")
+            self.lbl.configure(text="Поразка")
 
         self.lbl2.configure(text=f"Побед: {self.win}\nПроигрышей:"
                               f" {self.lose}\nНичей: {self.drow}")
